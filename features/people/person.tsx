@@ -5,6 +5,7 @@ import { Button } from 'components/button';
 type Props = {
     avatar: string;
     name: string;
+    onButtonClick: Function;
 };
 
 const useStyles = createUseStyles({
@@ -17,14 +18,20 @@ const useStyles = createUseStyles({
     },
 });
 
-export const Person: React.FunctionComponent<Props> = ({ avatar, name }) => {
+export const Person: React.FunctionComponent<Props> = ({
+    avatar,
+    name,
+    onButtonClick,
+}) => {
     const classes = useStyles();
     return (
         <div className={classes.container}>
             <div className={classes.wrapper}>
                 <div dangerouslySetInnerHTML={{ __html: avatar }} />
                 <label>{name}</label>
-                <Button onClick={(): void => {}}>See details</Button>
+                <Button onClick={(): void => onButtonClick(name)}>
+                    See details
+                </Button>
             </div>
         </div>
     );
