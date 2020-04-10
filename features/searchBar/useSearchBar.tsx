@@ -26,6 +26,7 @@ export const useSearchBar = (): Result => {
 
     const onModalClose = (): void => {
         setIsModalOpen(false);
+        setName('');
     };
 
     const onInputChange = (name: string): void => {

@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { PageContainer } from 'features/pageContainer';
 import { SearchBar } from 'features/searchBar';
+import { People } from 'features/people';
 
 const Home: NextPage = () => (
     <>
@@ -12,6 +13,7 @@ const Home: NextPage = () => (
         </Head>
         <PageContainer>
             <SearchBar />
+            <People />
         </PageContainer>
     </>
 );
