@@ -1,0 +1,28 @@
+{
+    "presets": [
+      [
+        "next/babel",
+        {
+          "preset-env": {
+            "useBuiltIns": "entry",
+            "corejs": 3
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": ["./"],
+          "alias": {
+            "components": "./components",
+            "features": "./features",
+            "utils": "./utils",
+            "services": "./services",
+            "config": "./config"
+          }
+        }
+      ]
+    ]
+  }
