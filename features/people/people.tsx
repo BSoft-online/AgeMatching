@@ -1,17 +1,19 @@
 import React from 'react';
 import { Modal } from 'components/modal';
+import { GenderName } from 'config/constants';
 import { Container } from './container';
 import { Header } from './header';
 import { Person } from './person';
 import { PeopleWrapper } from './peopleWrapper';
-import { getData } from './data';
+import { getData } from './getData';
 import { usePeople } from './usePeople';
 
 type Props = {
+    names: GenderName[];
     children?: React.ReactNode;
 };
 
-export const People: React.FunctionComponent<Props> = () => {
+export const People: React.FunctionComponent<Props> = ({ names }) => {
     const {
         age,
         name,
@@ -23,7 +25,7 @@ export const People: React.FunctionComponent<Props> = () => {
         <Container>
             <Header>Featured People:</Header>
             <PeopleWrapper>
-                {getData().map(
+                {getData(names).map(
                     (value, index): JSX.Element => (
                         <Person
                             key={index}

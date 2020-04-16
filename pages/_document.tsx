@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from 'react';
 import BaseDocument, { Head, Main, NextScript } from 'next/document';
 
 class Document extends BaseDocument {
-    render() {
+    render(): JSX.Element {
         return (
             <html lang="pl">
                 <Head>

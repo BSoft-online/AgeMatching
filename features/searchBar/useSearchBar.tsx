@@ -17,11 +17,9 @@ export const useSearchBar = (): Result => {
 
     const onSearchButtonClick = (): void => {
         setIsModalOpen(true);
-        getAge(name)
-            .then((responseAge: string): void => {
-                setAge(responseAge);
-            })
-            .catch();
+        getAge(name).then((responseAge: string): void => {
+            setAge(responseAge);
+        });
     };
 
     const onModalClose = (): void => {
