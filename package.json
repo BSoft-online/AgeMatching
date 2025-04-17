@@ -1,6 +1,6 @@
 {
   "name": "age-matching",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "This is a repository created for recruitment purposes.",
   "main": "index.js",
   "scripts": {
